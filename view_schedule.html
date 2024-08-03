@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+<h2>Your Scheduled Training Sessions</h2>
+<ul>
+  {% for booking in bookings %}
+  <li>{{ booking.date }} at {{ booking.time }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

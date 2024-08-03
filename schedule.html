@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<h2>Schedule a Training Session</h2>
+<form method="POST" action="{{ url_for('schedule') }}">
+  {{ form.hidden_tag() }}
+  <p>
+    {{ form.date.label }}<br />
+    {{ form.date(size=32) }}
+  </p>
+  <p>
+    {{ form.time.label }}<br />
+    {{ form.time(size=32) }}
+  </p>
+  <p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
